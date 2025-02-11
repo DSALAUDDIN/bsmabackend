@@ -1,0 +1,981 @@
+{
+  "info": {
+    "_postman_id": "your-collection-id",
+    "name": "BSMA API",
+    "description": "API collection for Bangladesh Sports Medicine Association.\n\nBefore using the collection:\n1. Run the Health Check request to ensure server is running\n2. Use the Admin Login request to get a token\n3. The token will be automatically set for all other requests\n\nBase URL: http://localhost:5000",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/health",
+          "host": [
+            "{{baseUrl}}/api/health"
+          ]
+        },
+        "description": "Check if the server is running and healthy"
+      }
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Register First Admin",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstName\": \"Super\",\n    \"lastName\": \"Admin\",\n    \"username\": \"superadmin\",\n    \"password\": \"123456\",\n    \"email\": \"admin@bsma.com\",\n    \"phoneNumber\": \"+8801XXXXXXXXX\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "register"
+              ]
+            },
+            "description": "Register the first admin (super admin). This can only be done once when no admins exist."
+          }
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if (jsonData.success && jsonData.data.token) {",
+                  "    pm.collectionVariables.set(\"token\", jsonData.data.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"admin@bsma.com\",\n    \"password\": \"123456\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "login"
+              ]
+            },
+            "description": "Login to get authentication token"
+          }
+        },
+        {
+          "name": "Create Admin",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"username\": \"johndoe\",\n    \"password\": \"123456\",\n    \"email\": \"john@bsma.com\",\n    \"phoneNumber\": \"+8801XXXXXXXXX\",\n    \"role\": \"admin\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin"
+              ]
+            },
+            "description": "Create a new admin (requires super_admin role)"
+          }
+        },
+        {
+          "name": "Change Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currentPassword\": \"123456\",\n    \"newPassword\": \"newpassword123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/change-password",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "change-password"
+              ]
+            },
+            "description": "Change admin password"
+          }
+        },
+        {
+          "name": "Get All Admins",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin"
+              ]
+            },
+            "description": "Get all admins"
+          }
+        },
+        {
+          "name": "Get Specific Admin",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/{{adminId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "{{adminId}}"
+              ]
+            },
+            "description": "Get specific admin by ID"
+          }
+        },
+        {
+          "name": "Update Admin",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"email\": \"jane@bsma.com\",\n    \"phoneNumber\": \"+8801XXXXXXXXX\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/{{adminId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "{{adminId}}"
+              ]
+            },
+            "description": "Update specific admin by ID"
+          }
+        },
+        {
+          "name": "Delete Admin",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/{{adminId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "{{adminId}}"
+              ]
+            },
+            "description": "Delete specific admin by ID"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Members",
+      "item": [
+        {
+          "name": "Create Member",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"memberNumber\": \"BSM001\",\n    \"name\": \"John Doe\",\n    \"designation\": \"Sports Physician\",\n    \"companyName\": \"Sports Med Clinic\",\n    \"email\": \"john@example.com\",\n    \"phoneNumber\": \"+8801XXXXXXXXX\",\n    \"address\": {\n        \"street\": \"123 Main St\",\n        \"city\": \"Dhaka\",\n        \"state\": \"Dhaka\",\n        \"postalCode\": \"1000\"\n    },\n    \"nid\": \"1234567890\",\n    \"bin\": \"0987654321\",\n    \"tradeLicenses\": [\"LIC001\", \"LIC002\"],\n    \"photo\": \"https://example.com/photo.jpg\",\n    \"memberType\": \"regular\",\n    \"specialization\": \"Orthopedics\",\n    \"qualifications\": [\n        {\n            \"degree\": \"MBBS\",\n            \"institution\": \"Medical College\",\n            \"year\": 2010\n        }\n    ],\n    \"socialMedia\": {\n        \"linkedin\": \"https://linkedin.com/in/johndoe\",\n        \"twitter\": \"@johndoe\",\n        \"facebook\": \"https://facebook.com/johndoe\",\n        \"instagram\": \"@johndoe\"\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/members",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "members"
+              ]
+            },
+            "description": "Create a new member"
+          }
+        },
+        {
+          "name": "Get All Members",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/members?page=1&limit=10&status=Active&memberType=regular&specialization=Orthopedics&city=Dhaka&search=jane&sortBy=createdAt&sortOrder=desc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "members"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "status",
+                  "value": "Active"
+                },
+                {
+                  "key": "memberType",
+                  "value": "regular"
+                },
+                {
+                  "key": "specialization",
+                  "value": "Orthopedics"
+                },
+                {
+                  "key": "city",
+                  "value": "Dhaka"
+                },
+                {
+                  "key": "search",
+                  "value": "jane"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "createdAt"
+                },
+                {
+                  "key": "sortOrder",
+                  "value": "desc"
+                }
+              ]
+            },
+            "description": "Get all members with filtering, pagination, and sorting"
+          }
+        },
+        {
+          "name": "Get Member By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/members/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "member_id"
+                }
+              ]
+            },
+            "description": "Get a member by their ID"
+          }
+        },
+        {
+          "name": "Update Member",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"John Doe Updated\",\n    \"designation\": \"Senior Sports Physician\",\n    \"companyName\": \"Sports Med Clinic\",\n    \"phoneNumber\": \"+8801YYYYYYYY\",\n    \"address\": {\n        \"street\": \"456 New St\",\n        \"city\": \"Dhaka\",\n        \"state\": \"Dhaka\",\n        \"postalCode\": \"1001\"\n    },\n    \"nid\": \"1234567891\",\n    \"bin\": \"0987654322\",\n    \"tradeLicenses\": [\"LIC003\"],\n    \"photo\": \"https://example.com/photo_updated.jpg\",\n    \"memberType\": \"premium\",\n    \"specialization\": \"Orthopedics Updated\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/members/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "member_id"
+                }
+              ]
+            },
+            "description": "Update a member by their ID"
+          }
+        },
+        {
+          "name": "Delete Member",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/members/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "member_id"
+                }
+              ]
+            },
+            "description": "Delete a member by their ID"
+          }
+        },
+        {
+          "name": "Renew Membership",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"months\": 12,\n    \"paymentDetails\": {\n        \"amount\": 5000,\n        \"paymentId\": \"PAY-001\"\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/members/:id/renew",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "members",
+                ":id",
+                "renew"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "member_id"
+                }
+              ]
+            },
+            "description": "Renew member's membership"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Activities",
+      "item": [
+        {
+          "name": "Create Activity",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Annual Sports Medicine Conference\",\n    \"description\": \"Join us for the annual conference on sports medicine advancements\",\n    \"imageUrl\": \"https://example.com/conference.jpg\",\n    \"date\": \"2024-03-15T09:00:00Z\",\n    \"endDate\": \"2024-03-17T18:00:00Z\",\n    \"location\": {\n        \"venue\": \"Hotel Sonargaon\",\n        \"address\": \"107 Kazi Nazrul Islam Avenue\",\n        \"city\": \"Dhaka\"\n    },\n    \"activityType\": \"conference\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/activities",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "activities"
+              ]
+            },
+            "description": "Create a new activity"
+          }
+        },
+        {
+          "name": "Get All Activities",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/activities",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "activities"
+              ]
+            },
+            "description": "Get all activities"
+          }
+        },
+        {
+          "name": "Get Activity by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/activities/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "activities",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "activity_id"
+                }
+              ]
+            },
+            "description": "Get an activity by its ID"
+          }
+        },
+        {
+          "name": "Edit Activity",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Updated Sports Medicine Conference\",\n    \"description\": \"Join us for the updated annual conference on sports medicine advancements\",\n    \"imageUrl\": \"https://example.com/updated-conference.jpg\",\n    \"date\": \"2024-04-01T09:00:00Z\",\n    \"endDate\": \"2024-04-03T18:00:00Z\",\n    \"location\": {\n        \"venue\": \"Hotel Sonargaon\",\n        \"address\": \"107 Kazi Nazrul Islam Avenue\",\n        \"city\": \"Dhaka\"\n    },\n    \"activityType\": \"conference\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/activities/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "activities",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "activity_id"
+                }
+              ]
+            },
+            "description": "Edit an existing activity"
+          }
+        },
+        {
+          "name": "Delete Activity",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/activities/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "activities",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "activity_id"
+                }
+              ]
+            },
+            "description": "Delete an activity by its ID"
+          }
+        }
+      ]
+    },
+{
+  "name": "News",
+  "item": [
+    {
+      "name": "Create News",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"New Research in Sports Medicine\",\n  \"content\": \"A new study reveals faster recovery methods\",\n  \"category\": \"research\",\n  \"tags\": [\"ACL\", \"recovery\", \"rehabilitation\"],\n  \"publishedDate\": \"2024-01-01T00:00:00Z\",\n  \"imageUrl\": \"https://example.com/acl-research.jpg\",\n  \"author\": \"Dr. Smith et al\",\n  \"status\": \"published\",\n  \"visibility\": \"public\",\n  \"featured\": true\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/news",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "news"
+          ]
+        },
+        "description": "Create a new news article"
+      }
+    },
+    {
+      "name": "Edit News by ID",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Research in Sports Medicine\",\n  \"content\": \"Updated content of the research findings...\",\n  \"category\": \"research\",\n  \"tags\": [\"ACL\", \"recovery\", \"rehabilitation\", \"sports medicine\"],\n  \"status\": \"published\",\n  \"visibility\": \"public\",\n  \"featured\": true\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/news/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "news",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "news_id"
+            }
+          ]
+        },
+        "description": "Edit a news article by ID"
+      }
+    },
+    {
+      "name": "View All News",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/news",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "news"
+          ]
+        },
+        "description": "View all news articles"
+      }
+    },
+    {
+      "name": "View News by ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/news/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "news",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "news_id"
+            }
+          ]
+        },
+        "description": "View a single news article by ID"
+      }
+    },
+    {
+      "name": "Delete News by ID",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/news/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "news",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "news_id"
+            }
+          ]
+        },
+        "description": "Delete a news article by ID"
+      }
+    }
+  ]
+}
+,
+{
+  "name": "Notices",
+  "item": [
+    {
+      "name": "Create Notice",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Important Notice: Membership Renewal\",\n    \"description\": \"Please renew your membership before the deadline.\",\n    \"noticeDate\": \"2024-01-01T00:00:00Z\",\n    \"expiryDate\": \"2024-01-31T23:59:59Z\",\n    \"category\": \"urgent\",\n    \"status\": \"active\",\n    \"visibility\": \"public\",\n    \"createdBy\": \"{{adminId}}\",\n    \"attachments\": [\n        {\n            \"title\": \"Renewal Form\",\n            \"fileUrl\": \"https://example.com/form.pdf\",\n            \"fileType\": \"application/pdf\"\n        }\n    ],\n    \"notificationPreferences\": {\n        \"email\": true,\n        \"push\": true,\n        \"sms\": false\n    },\n    \"acknowledgmentRequired\": true,\n    \"acknowledgmentDeadline\": \"2024-01-15T23:59:59Z\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/notices",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "notices"
+          ]
+        },
+        "description": "Create a new notice."
+      }
+    },
+    {
+      "name": "Get All Active Notices",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/notices?status=active&category=urgent&page=1&limit=10",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "notices"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "active"
+            },
+            {
+              "key": "category",
+              "value": "urgent"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            }
+          ]
+        },
+        "description": "Fetch all active notices with optional filtering by category and pagination."
+      }
+    },
+    {
+      "name": "Get Notice by ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/notices/{{noticeId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "notices",
+            "{{noticeId}}"
+          ]
+        },
+        "description": "Retrieve a specific notice by its ID."
+      }
+    },
+    {
+      "name": "Update Notice by ID",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Updated Notice Title\",\n    \"description\": \"Updated description of the notice.\",\n    \"expiryDate\": \"2024-02-15T23:59:59Z\",\n    \"status\": \"expired\",\n    \"visibility\": \"private\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/notices/{{noticeId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "notices",
+            "{{noticeId}}"
+          ]
+        },
+        "description": "Update a specific notice by its ID."
+      }
+    },
+    {
+      "name": "Delete Notice by ID",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/notices/{{noticeId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "notices",
+            "{{noticeId}}"
+          ]
+        },
+        "description": "Delete a specific notice by its ID."
+      }
+    }
+  ]
+}
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "localhost:5000/bs"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-02-06T07:40:02.055Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T07:40:02.903Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-02-06T07:47:52.562Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T07:47:53.330Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T07:50:07.793Z"}
+{"level":"info","message":"Server running in production mode on port 5000","timestamp":"2025-02-06T07:50:07.799Z"}
+{"level":"info","message":"MongoDB Connected: mongodb+srv://appalauddin:appalauddin@cluster0.1lqxs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0","timestamp":"2025-02-06T07:50:07.800Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T07:52:08.015Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T07:52:08.022Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T07:54:54.523Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T07:54:54.529Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T07:55:55.622Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T07:55:55.627Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T07:56:09.913Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T07:56:09.919Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T08:00:07.939Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T08:00:07.944Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T08:01:17.522Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T08:01:17.528Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T08:02:42.365Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T08:02:42.371Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T08:06:04.639Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T08:06:04.645Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T08:21:40.846Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T08:21:40.852Z"}
+{"level":"error","message":"SyntaxError: Expected property name or '}' in JSON at position 39 (line 3 column 13)\n    at JSON.parse (<anonymous>)\n    at parse (D:\\New folder (2)\\backend\\node_modules\\body-parser\\lib\\types\\json.js:92:19)\n    at D:\\New folder (2)\\backend\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (D:\\New folder (2)\\backend\\node_modules\\raw-body\\index.js:238:16)\n    at done (D:\\New folder (2)\\backend\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (D:\\New folder (2)\\backend\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:507:28)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2025-02-06T08:36:30.667Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T09:43:17.245Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T09:43:17.254Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T09:44:47.472Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T09:44:47.478Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T09:45:08.652Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T09:45:08.657Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T10:12:05.227Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T10:12:05.233Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T13:05:03.810Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T13:05:03.816Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T13:18:48.423Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T13:18:48.430Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T13:32:53.415Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T13:32:53.421Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T13:34:47.163Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T13:34:47.168Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T13:36:17.024Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T13:36:17.031Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T13:39:23.366Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T13:39:23.372Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T13:52:46.646Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T13:52:46.651Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T13:55:38.545Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T13:55:38.551Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T13:57:12.234Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T13:57:12.239Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:01:40.199Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:01:40.205Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:07:43.028Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:07:43.034Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:09:02.879Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:09:02.884Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:11:25.700Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:11:25.705Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:13:05.078Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:13:05.084Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:13:45.468Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:13:45.473Z"}
+{"level":"error","message":"TypeError: isValidObjectId is not a function\n    at validateNewsId (D:\\New folder (2)\\backend - Copy (2)\\src\\routes\\newsRoutes.js:11:8)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-02-06T14:16:36.667Z"}
+{"level":"error","message":"TypeError: isValidObjectId is not a function\n    at validateNewsId (D:\\New folder (2)\\backend - Copy (2)\\src\\routes\\newsRoutes.js:11:8)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-02-06T14:16:54.347Z"}
+{"level":"error","message":"TypeError: isValidObjectId is not a function\n    at validateNewsId (D:\\New folder (2)\\backend - Copy (2)\\src\\routes\\newsRoutes.js:11:8)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-02-06T14:17:03.860Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:21:37.899Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:21:37.904Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:23:17.437Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:23:17.442Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:24:26.067Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:24:26.073Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:25:25.696Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:25:25.702Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:26:18.954Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:26:18.960Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:26:31.005Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:26:31.011Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:32:20.704Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:32:20.710Z"}
+{"level":"error","message":"UNHANDLED REJECTION! Shutting down...","timestamp":"2025-02-06T14:32:22.230Z"}
+{"level":"error","message":"TypeError","timestamp":"2025-02-06T14:32:22.230Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:32:56.461Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:32:56.468Z"}
+{"level":"error","message":"UNHANDLED REJECTION! Shutting down...","timestamp":"2025-02-06T14:33:01.764Z"}
+{"level":"error","message":"TypeError","timestamp":"2025-02-06T14:33:01.764Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:34:20.060Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:34:20.065Z"}
+{"level":"error","message":"UNHANDLED REJECTION! Shutting down...","timestamp":"2025-02-06T14:34:28.218Z"}
+{"level":"error","message":"TypeError","timestamp":"2025-02-06T14:34:28.218Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T14:36:00.706Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T14:36:00.712Z"}
+{"level":"error","message":"TypeError: isValidObjectId is not a function\n    at validateNewsId (D:\\New folder (2)\\backend - Copy (2)\\src\\routes\\newsRoutes.js:11:8)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-02-06T14:36:26.467Z"}
+{"level":"error","message":"TypeError: isValidObjectId is not a function\n    at validateNewsId (D:\\New folder (2)\\backend - Copy (2)\\src\\routes\\newsRoutes.js:11:8)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:421:3)\n    at next (D:\\New folder (2)\\backend - Copy (2)\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2025-02-06T14:36:38.605Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T15:40:14.771Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T15:40:14.778Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T15:43:57.481Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T15:43:57.487Z"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, stat 'J:\\Business\\Client\\Rocky Vai\\new back\\public\\index.html'","timestamp":"2025-02-06T15:45:01.252Z"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, stat 'J:\\Business\\Client\\Rocky Vai\\new back\\public\\index.html'","timestamp":"2025-02-06T15:45:30.659Z"}
+{"level":"info","message":"Server is running on port 5000","timestamp":"2025-02-06T15:46:07.840Z"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, stat 'J:\\Business\\Client\\Rocky Vai\\new back\\public\\index.html'","timestamp":"2025-02-06T15:46:13.144Z"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, stat 'J:\\Business\\Client\\Rocky Vai\\new back\\public\\index.html'","timestamp":"2025-02-06T15:46:20.378Z"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, stat 'J:\\Business\\Client\\Rocky Vai\\new back\\public\\index.html'","timestamp":"2025-02-06T15:46:49.271Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T15:46:58.196Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T15:46:58.202Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:00:58.628Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T19:00:58.636Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:13:56.488Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T19:13:56.498Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:13:56.823Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:14:49.710Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:15:39.889Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:18:27.824Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T19:18:27.830Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:19:58.309Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T19:19:58.315Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:46:11.225Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T19:46:11.230Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:46:28.477Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T19:47:47.000Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T20:22:21.077Z"}
+{"level":"info","message":"\n        Server is running!\n        Listening on port 5000\n        Environment: production\n        Database: bsmabd\n      ","timestamp":"2025-02-06T20:22:21.082Z"}
+{"level":"info","message":"MongoDB Connected Successfully","timestamp":"2025-02-06T20:22:21.418Z"}
