@@ -15,3 +15,4 @@
 {"level":"error","message":"Error: ENOENT: no such file or directory, stat 'J:\\Business\\Client\\Rocky Vai\\new back\\public\\index.html'","timestamp":"2025-02-06T15:46:13.144Z"}
 {"level":"error","message":"Error: ENOENT: no such file or directory, stat 'J:\\Business\\Client\\Rocky Vai\\new back\\public\\index.html'","timestamp":"2025-02-06T15:46:20.378Z"}
 {"level":"error","message":"Error: ENOENT: no such file or directory, stat 'J:\\Business\\Client\\Rocky Vai\\new back\\public\\index.html'","timestamp":"2025-02-06T15:46:49.271Z"}
+{"level":"error","message":"UNCAUGHT EXCEPTION! Shutting down...","timestamp":"2025-04-09T14:08:35.191Z"}
