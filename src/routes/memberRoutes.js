@@ -3,20 +3,17 @@ const memberController = require('../controllers/memberController');
 const { protect } = require('../middlewares/authMiddleware');
 const router = express.Router();
 
-// Public routes
+// ✅ Public routes
 router.get('/search', memberController.searchMembers);
+router.get('/', memberController.getAllMembers);           // 👈 Public: all members
+router.get('/:id', memberController.getMemberById);        // 👈 Public: single member
 
-// Protected routes (require authentication middleware)
+// 🔒 Protected routes
 router.use(protect);
 
-// CRUD operations
-router.route('/')
-  .post(memberController.createMember)
-  .get(memberController.getAllMembers);
-
-router.route('/:id')
-  .get(memberController.getMemberById)
-  .put(memberController.updateMember)
-  .delete(memberController.deleteMember);
+// ✅ Authenticated CRUD
+router.post('/', memberController.createMember);
+router.put('/:id', memberController.updateMember);
+router.delete('/:id', memberController.deleteMember);
 
 module.exports = router;
