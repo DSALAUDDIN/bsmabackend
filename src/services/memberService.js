@@ -12,34 +12,35 @@ class MemberService {
   }
 
   // Get all members with optional filters and pagination
-async getAllMembers(query = {}) {
-  const { page = 1, limit = 10, sortBy = 'createdAt', sortOrder = 'desc' } = query;
-  const filter = {};
+  async getAllMembers(query = {}) {
+    const { sortBy = 'createdAt', sortOrder = 'desc' } = query;
+    const filter = {};
 
-  // Search functionality
-  if (query.search) {
-    filter.$or = [
-      { name: { $regex: query.search, $options: 'i' } },
-      { email: { $regex: query.search, $options: 'i' } }
-    ];
+    // Search functionality
+    if (query.search) {
+      filter.$or = [
+        { name: { $regex: query.search, $options: 'i' } },
+        { email: { $regex: query.search, $options: 'i' } }
+      ];
+    }
+
+    // Create a query to fetch members with sorting (without any pagination limit)
+    const memberQuery = Member.find(filter)
+      .sort({ [sortBy]: sortOrder === 'desc' ? -1 : 1 }); // Sort by requested field and order
+
+    // Execute the query to get all members
+    const members = await memberQuery;
+
+    // Count the total number of matching members
+    const count = await Member.countDocuments(filter);
+
+    return {
+      members,
+      totalPages: 1, // With no pagination, everything is on one "page"
+      currentPage: 1,
+      totalMembers: count
+    };
   }
-
-  // Fetch members with pagination and sorting
-  const members = await Member.find(filter)
-    .limit(limit * 1) // Limit to the requested number of members
-    .skip((page - 1) * limit) // Skip based on the current page
-    .sort({ [sortBy]: sortOrder === 'desc' ? -1 : 1 }); // Sort by requested field and order
-
-  // Count the total number of matching members
-  const count = await Member.countDocuments(filter);
-
-  return {
-    members,
-    totalPages: Math.ceil(count / limit), // Calculate total pages
-    currentPage: page,
-    totalMembers: count
-  };
-}
 
   // Get a member by ID
   async getMemberById(id) {
